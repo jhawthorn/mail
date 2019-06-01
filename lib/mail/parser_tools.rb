@@ -11,5 +11,8 @@ module Mail
         data.slice(from_bytes..to_bytes)
       end
     end
+
+    def optimize_ragel_data!
+    end
   end
 end

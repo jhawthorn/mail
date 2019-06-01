@@ -561,6 +561,8 @@ begin
       end
       self.en_main = 1
 
+      optimize_ragel_data!
+
       def self.parse(data)
         data = data.dup.force_encoding(Encoding::ASCII_8BIT) if data.respond_to?(:force_encoding)
 
@@ -654,7 +656,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -712,7 +714,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -742,7 +744,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -799,7 +801,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -823,7 +825,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -857,7 +859,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
@@ -875,7 +877,7 @@ begin
                     # Use quoted string value if one exists, otherwise use parameter value
                     value = qstr || chars(data, param_val_s, p - 1)
 
-                    content_disposition.parameters << {param_attr => value}
+                    content_disposition.parameters << { param_attr => value }
                     param_attr = nil
                     qstr = nil
                   end
