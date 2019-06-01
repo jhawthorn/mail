@@ -39,6 +39,7 @@ module Mail::Parsers
     ContentTransferEncodingStruct = Struct.new(:encoding, :error)
 
     %%write data noprefix;
+    optimize_ragel_data!
 
     def self.parse(data)
       data = data.dup.force_encoding(Encoding::ASCII_8BIT) if data.respond_to?(:force_encoding)
